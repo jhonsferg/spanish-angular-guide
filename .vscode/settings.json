@@ -1,0 +1,32 @@
+{
+  // Markdown
+  "editor.wordWrap": "on",
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  // YAML
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  // markdownlint — apuntar a la config del repo
+  "markdownlint.config": {
+    "extends": ".markdownlint.yaml"
+  },
+  // Mostrar regla de columna para referencia (no enforcement)
+  "editor.rulers": [120],
+  // Archivos a excluir de la vista del explorador
+  "files.exclude": {
+    "site/": true,
+    ".venv/": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  // Saltos de línea LF en todos los archivos
+  "files.eol": "\n"
+}
