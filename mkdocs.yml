@@ -3,6 +3,7 @@ site_description: Guía de Angular en español, de los fundamentos a arquitectur
 site_url: https://jhonsferg.github.io/spanish-angular-guide/
 repo_url: https://github.com/jhonsferg/spanish-angular-guide
 repo_name: jhonsferg/spanish-angular-guide
+edit_uri: edit/main/docs/
 docs_dir: docs
 site_dir: site
 
@@ -25,6 +26,7 @@ theme:
         icon: material/brightness-4
         name: Cambiar a modo claro
   features:
+    - navigation.instant
     - navigation.top
     - navigation.indexes
     - navigation.path
