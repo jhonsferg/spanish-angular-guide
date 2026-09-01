@@ -1,7 +1,29 @@
-# MkDocs build output
+# MkDocs — build output
 site/
+.cache/
 
 # Python / uv
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Editor / IDE
+.vscode/*.code-snippets
+.idea/
+*.swp
+*~
+*.orig
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Herramientas de IA / coding assistants
+.claude/
+.cursor/
