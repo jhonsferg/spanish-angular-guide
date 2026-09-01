@@ -6,3 +6,8 @@ requires-python = ">=3.11"
 dependencies = [
     "mkdocs-material>=9.6",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+]
