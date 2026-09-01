@@ -1,0 +1,37 @@
+# Git
+.git/
+.gitignore
+
+# MkDocs build output (se genera en el builder, no lo necesitamos en el contexto)
+site/
+.cache/
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Herramientas de IA
+.claude/
+.cursor/
+
+# Docker Compose (solo para desarrollo local, no necesario en la imagen)
+docker-compose.yml
+
+# Documentación de contribución (no necesaria en la imagen)
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
