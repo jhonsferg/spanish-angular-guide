@@ -131,7 +131,7 @@ flowchart TD
 
     V21["Angular 21\n(Nov 2025)\nZoneless estable\nSignal Forms developer preview\n@angular/build dedicado"] --> V22
 
-    V22["Angular 22+\nSignal Forms estables\nAPI surface simplificada\nMejoras continuas de rendimiento"]
+    V22["Angular 22\n(Jun 2026)\nOnPush por defecto\nSignal Forms estables: form()/field()\n@Service(), injectAsync()\nAngular Aria estable"]
 ```
 
 ### Principios que guían la evolución
@@ -169,4 +169,4 @@ Las guías de migración oficiales en `angular.dev` documentan cada API deprecad
 
 ## ¿Qué sigue?
 
-Llegaste al final de la guía. Con estos 36 capítulos tienes las herramientas para construir, optimizar, testear y desplegar aplicaciones Angular modernas - desde el primer `ng new` hasta las últimas APIs de Angular 21.
+Con estos 36 capítulos tienes las herramientas para construir, optimizar, testear y desplegar aplicaciones Angular modernas - desde el primer `ng new` hasta las últimas APIs de Angular 21. En el Capítulo 37 cerramos con Angular 22: `OnPush` como estrategia de change detection por defecto, Signal Forms ya estables con su API definitiva, y las herramientas nuevas de inyección de dependencias `@Service()` e `injectAsync()`.
