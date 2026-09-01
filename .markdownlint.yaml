@@ -1,0 +1,57 @@
+# Configuración de markdownlint para spanish-angular-guide
+# Documentación: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+default: true
+
+# MD013 — Longitud de línea
+# Desactivado completamente: el contenido técnico tiene líneas muy largas en comentarios
+# de código inline, tablas y metadatos YAML frontmatter
+MD013: false
+
+# MD033 — HTML inline
+# MkDocs Material usa HTML en algunos contextos (atributos, badges, etc.)
+MD033:
+  allowed_elements:
+    - details
+    - summary
+    - sup
+    - sub
+    - kbd
+    - br
+    - a
+    - img
+
+# MD024 — Encabezados duplicados
+# Documentación técnica repite secciones como "Ejemplo", "Resumen", etc.
+MD024: false
+
+# MD025 — Múltiples H1 en el mismo documento
+# Algunos archivos de proyectos integrados usan H1 como títulos de secciones de código
+MD025: false
+
+# MD036 — Énfasis usado como heading
+# El contenido existente usa **Texto** como separadores visuales
+MD036: false
+
+# MD040 — Bloques de código sin lenguaje especificado
+# Hay bloques de salida de terminal y texto plano que no tienen lenguaje
+MD040: false
+
+# MD041 — Primer elemento debe ser H1
+# Algunos archivos empiezan con admonitions o bloques de código
+MD041: false
+
+# MD007 — Sangría de listas no ordenadas
+MD007:
+  indent: 2
+
+# MD030 — Espacios después del marcador de lista
+MD030:
+  ul_single: 1
+  ol_single: 1
+  ul_multi: 1
+  ol_multi: 1
+
+# MD046 — Estilo de bloques de código
+# Algunos archivos usan indentación en lugar de fences
+MD046: false
