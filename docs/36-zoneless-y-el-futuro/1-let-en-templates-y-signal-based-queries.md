@@ -28,6 +28,7 @@ Antes de Angular 20, el único modo de crear variables locales en un template er
 ```
 
 Las variables declaradas con `@let` son:
+
 - **Reactivas**: si el valor de la derecha es un Signal o un pipe `async`, se recalculan automáticamente en cada detección de cambios.
 - **Locales al bloque**: una variable declarada dentro de `@if` no es visible fuera de él.
 - **De solo lectura**: no se pueden reasignar desde el template ni desde la clase.

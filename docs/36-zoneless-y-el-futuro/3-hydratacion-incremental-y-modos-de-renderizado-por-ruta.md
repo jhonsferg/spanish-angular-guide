@@ -108,6 +108,7 @@ export const serverRoutes: ServerRoute[] = [
 ```
 
 El `RenderMode` enum tiene tres valores:
+
 - **`RenderMode.Prerender`**: genera HTML estático en build time (SSG). Más rápido en producción, ideal para contenido que cambia poco.
 - **`RenderMode.Server`**: renderiza en el servidor en cada request (SSR). Necesario para contenido dinámico o personalizado.
 - **`RenderMode.Client`**: renderiza solo en el cliente (CSR). Idóneo para rutas privadas sin valor de SEO.

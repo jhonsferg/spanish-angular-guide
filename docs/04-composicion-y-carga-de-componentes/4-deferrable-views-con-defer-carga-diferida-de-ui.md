@@ -125,7 +125,7 @@ La diferencia real depende del tamaño de los componentes diferidos. En aplicaci
 `@defer` admite una directiva de prefetch separada del trigger de renderizado. Esto permite que Angular descargue el JavaScript del componente antes de que el trigger de renderizado se active, reduciendo la latencia percibida cuando finalmente se muestra.
 
 ```html
-<!-- 
+<!--
   prefetch on idle: descarga el JS cuando el navegador esté inactivo
   on interaction: pero solo renderiza cuando el usuario interactúa
 -->

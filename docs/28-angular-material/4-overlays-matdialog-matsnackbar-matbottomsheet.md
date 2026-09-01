@@ -11,7 +11,7 @@ El flujo de un dialog tiene tres actores: el componente que abre, el servicio `M
 ```typescript
 // productos/confirmar-eliminacion-dialog.component.ts
 import { Component, inject }         from '@angular/core';
-import { MAT_DIALOG_DATA, 
+import { MAT_DIALOG_DATA,
          MatDialogRef,
          MatDialogModule }           from '@angular/material/dialog';
 import { MatButtonModule }           from '@angular/material/button';
@@ -29,7 +29,7 @@ interface DatosConfirmacion {
     <h2 mat-dialog-title>Confirmar eliminación</h2>
 
     <mat-dialog-content>
-      <p>¿Estás seguro de que querés eliminar 
+      <p>¿Estás seguro de que querés eliminar
          <strong>{{ datos.nombreProducto }}</strong>?
       </p>
       <p class="advertencia">Esta acción no se puede deshacer.</p>

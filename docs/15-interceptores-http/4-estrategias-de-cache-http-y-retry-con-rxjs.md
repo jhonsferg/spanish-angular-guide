@@ -11,11 +11,13 @@ Cuando una aplicación hace la misma petición HTTP repetidamente, estamos despe
 Antes de escribir código, aclaremos las reglas de oro:
 
 **Cachear cuando:**
+
 - Los datos cambian con poca frecuencia (catálogos, configuraciones, listas de referencia).
 - Múltiples partes de la aplicación necesitan los mismos datos simultáneamente.
 - El costo de una petición extra es significativo (latencia alta, API con límite de rate).
 
 **No cachear cuando:**
+
 - Los datos deben estar siempre frescos (saldo de cuenta, precio en tiempo real).
 - La petición tiene efectos secundarios en el servidor (POST, PUT, DELETE, PATCH).
 - El usuario tiene datos personalizados que dependen de su sesión o permisos.

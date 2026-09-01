@@ -106,6 +106,7 @@ export class RegistroComponent {
 ```
 
 La sintaxis de `fb.group()` acepta un objeto donde cada valor puede ser:
+
 - Un valor inicial simple: `'valor'` → equivale a `new FormControl('valor')`
 - Un array de dos elementos: `[valor, validadores]`
 - Un array de tres elementos: `[valor, validadoresSincronos, validadoresAsíncronos]`

@@ -104,6 +104,7 @@ export class DetallePedidoComponent {
 ```
 
 Los Signals disponibles en el objeto `resource`:
+
 - `resource.value()` - el dato cargado (o `undefined` si no hay dato aún)
 - `resource.isLoading()` - `true` mientras el loader está en progreso
 - `resource.error()` - el error capturado (o `undefined` si no hay error)

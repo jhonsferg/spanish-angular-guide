@@ -61,6 +61,7 @@ ATL prioriza las queries según cómo los usuarios reales interactúan con la p�
 ```
 
 Cada query tiene variantes:
+
 - `getBy...`: lanza error si no encuentra (o encuentra más de uno)
 - `queryBy...`: retorna null si no encuentra (útil para verificar ausencia)
 - `findBy...`: retorna Promise, espera a que el elemento aparezca (async)

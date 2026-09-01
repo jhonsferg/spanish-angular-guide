@@ -42,7 +42,7 @@ Ventaja: excelente para SEO, sin JavaScript necesario para la composición inici
 La forma más aislada de integración. Cada MFE vive en su propio iframe:
 
 ```html
-<iframe src="https://productos.mi-empresa.com/lista" 
+<iframe src="https://productos.mi-empresa.com/lista"
         sandbox="allow-scripts allow-same-origin">
 </iframe>
 ```

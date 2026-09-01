@@ -60,6 +60,7 @@ export class LayoutComponent {}
 ```
 
 Puntos importantes del ejemplo:
+
 - `<header>`, `<nav>`, `<main>`, `<footer>` son landmarks que los lectores de pantalla anuncian automáticamente.
 - El `<main>` tiene `id` y `tabindex="-1"` para recibir foco programático (lo usaremos al navegar entre rutas).
 - Los `<a>` se usan para navegación y los `<button>` para acciones (nunca `<div>` con `onclick`).

@@ -32,6 +32,7 @@ export class ProblemaComponent implements OnInit {
 ```
 
 Las consecuencias son:
+
 - **Memory leak**: el componente no puede ser recolectado por el garbage collector porque la suscripción mantiene una referencia a él.
 - **Errores silenciosos**: Angular puede lanzar `ExpressionChangedAfterItHasBeenCheckedError` o errores de componente destruido.
 - **Comportamiento inesperado**: el código del suscriptor sigue ejecutándose en un contexto muerto.
@@ -202,11 +203,13 @@ export class TareasComponent implements OnInit {
 ```
 
 Cuándo preferir `async pipe` sobre suscripción manual:
+
 - Cuando solo necesitamos el valor en el template.
 - Cuando usamos `OnPush`: el `async pipe` activa la detección de cambios automáticamente.
 - Cuando queremos simplificar el código (menos boilerplate).
 
 Cuándo usar suscripción manual (con `takeUntilDestroyed`):
+
 - Cuando necesitamos ejecutar lógica de negocio en respuesta a los valores (actualizar otros estados, llamar métodos, etc.).
 - Cuando el valor necesita ser almacenado en una variable de clase para usarlo en métodos.
 

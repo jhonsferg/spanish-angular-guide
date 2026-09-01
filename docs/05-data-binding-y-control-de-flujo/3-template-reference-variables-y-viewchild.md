@@ -164,6 +164,7 @@ export class BusquedaAvanzadaComponent implements AfterViewInit {
 ```
 
 El decorador `@ViewChild` acepta como primer argumento un selector que puede ser:
+
 - El nombre de una template reference variable como string: `@ViewChild('campoBusqueda')`.
 - La clase de un componente o directiva: `@ViewChild(MiComponenteComponent)`.
 - Un token de inyección de dependencias.

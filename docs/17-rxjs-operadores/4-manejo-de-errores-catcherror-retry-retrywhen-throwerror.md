@@ -50,6 +50,7 @@ export class ArticulosComponent implements OnInit {
 ```
 
 La diferencia entre retornar `of([])` y `EMPTY` es sutil pero importante:
+
 - `of([])` emite un valor (la lista vacía) y luego completa. El `async pipe` recibirá `[]`.
 - `EMPTY` completa directamente sin emitir. El `async pipe` no actualizará el template.
 - `throwError(() => new Error('...'))` re-lanza el error, propagándolo al suscriptor.

@@ -182,6 +182,7 @@ export class EstadosComponent {
 ```
 
 Los estados posibles son:
+
 - **Idle**: `request()` devolvió `undefined` (indicador para no cargar nada)
 - **Loading**: petición en curso, primer load
 - **Reloading**: petición en curso, recarga (ya había valor previo)

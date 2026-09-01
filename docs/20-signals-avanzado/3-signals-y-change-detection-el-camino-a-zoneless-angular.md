@@ -27,6 +27,7 @@ sequenceDiagram
 El problema es la flecha "verificar TODOS los componentes". En una app grande con cientos de componentes, esa verificación ocurre en cada evento, cada `setTimeout`, cada respuesta HTTP. Angular usa `ChangeDetectionStrategy.OnPush` para optimizarlo, pero sigue siendo una estrategia de "empujar desde arriba hacia abajo" que puede ser costosa.
 
 Además, Zone.js introduce problemas secundarios:
+
 - Aumenta el tamaño del bundle en ~13KB (minificado + gzip).
 - Hace difícil depurar código asíncrono porque los stack traces están "envueltos".
 - Puede causar ciclos de detección inesperados cuando librerías de terceros usan async de formas particulares.

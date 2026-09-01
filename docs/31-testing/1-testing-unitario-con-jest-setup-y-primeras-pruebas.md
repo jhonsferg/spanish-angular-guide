@@ -142,6 +142,7 @@ describe('MiComponente', () => {
 ```
 
 Las diferencias principales:
+
 - `spyOn(...).and.returnValue(x)` → `jest.spyOn(...).mockReturnValue(x)`
 - `spyOn(...).and.callFake(fn)` → `jest.spyOn(...).mockImplementation(fn)`
 - `jasmine.createSpy()` → `jest.fn()`

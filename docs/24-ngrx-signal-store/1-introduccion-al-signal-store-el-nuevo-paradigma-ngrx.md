@@ -134,12 +134,14 @@ Esta flexibilidad es una gran ventaja sobre el store clásico, donde todo el est
 Esta es la pregunta que más nos haremos al adoptarlo. La respuesta honesta es que depende del contexto:
 
 **Prefiere el Signal Store cuando:**
+
 - El estado es específico de una feature y no necesita compartirse globalmente.
 - El equipo prefiere menos archivos y menos boilerplate.
 - La lógica es mayormente síncrona o con efectos simples.
 - Estás construyendo una feature nueva sin integración con state global existente.
 
 **Prefiere el store clásico cuando:**
+
 - El estado se comparte entre múltiples features no relacionadas.
 - Necesitas el historial completo de acciones en DevTools para auditoría.
 - Ya tienes una base de código grande con store clásico y el costo de migración es alto.

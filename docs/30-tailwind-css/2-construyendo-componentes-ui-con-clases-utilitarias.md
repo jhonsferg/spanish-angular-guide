@@ -109,6 +109,7 @@ export class InsigniaEstadoComponent {
 ```
 
 La recomendación general:
+
 - **`[class]="expresion"`**: para una sola condición o cuando construimos la clase completa en el componente.
 - **`[ngClass]`**: cuando manejamos múltiples clases condicionales independientes en el template.
 - **`class` estático + `[class.nombre]` individual**: para togglear una sola clase.

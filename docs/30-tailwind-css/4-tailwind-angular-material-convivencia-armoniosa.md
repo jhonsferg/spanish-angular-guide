@@ -64,11 +64,13 @@ Sin embargo, el orden de imports en CSS tiene limitaciones. La solución más ro
 La regla práctica que funciona bien en proyectos reales:
 
 **Usar Angular Material para:**
+
 - Componentes complejos con lógica de estado: `MatDialog`, `MatTable` con sort y paginación, `MatDatepicker`, `MatAutocomplete`
 - Componentes con accesibilidad compleja ya implementada: `MatSelect`, `MatSlider`, `MatChips`
 - Formularios con validación visual integrada: `MatFormField`, `MatError`
 
 **Usar Tailwind para:**
+
 - Layout: grid, flex, contenedores, espaciado entre secciones
 - Tipografía general y colores de fondo de página
 - Componentes simples: badges, alertas, avatares, separadores
@@ -217,6 +219,7 @@ flowchart TD
 ```
 
 Los proyectos que más se benefician son aquellos donde:
+
 1. Ya existe una base de código con Angular Material y queremos modernizar el layout.
 2. Necesitamos componentes de datos complejos (tablas, selectores múltiples) pero queremos flexibilidad en el diseño general.
 3. El equipo conoce Material para la accesibilidad y no quiere reimplementarla desde cero.
