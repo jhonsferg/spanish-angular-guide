@@ -1,0 +1,270 @@
+site_name: Angular - La Guía en Español
+site_description: Guía de Angular en español, de los fundamentos a arquitecturas de nivel enterprise, actualizada hasta Angular 22.
+site_url: https://jhonsferg.github.io/spanish-angular-guide/
+repo_url: https://github.com/jhonsferg/spanish-angular-guide
+repo_name: jhonsferg/spanish-angular-guide
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: es
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jhonsferg/spanish-angular-guide
+
+nav:
+  - Inicio: index.md
+  - "PARTE I - Primeros Pasos con Angular":
+      - "Cap. 1 - Historia y Primeros Pasos":
+          - "Historia, versiones y el renacimiento de Angular": 01-historia-y-primeros-pasos/1-historia-versiones-y-el-renacimiento-de-angular.md
+          - "Angular vs React vs Vue: cuándo elegir cada uno": 01-historia-y-primeros-pasos/2-angular-vs-react-vs-vue-cuando-elegir-cada-uno.md
+          - "Instalación de Node, Angular CLI y VS Code": 01-historia-y-primeros-pasos/3-instalacion-de-node-angular-cli-y-vs-code.md
+          - "Tu primera aplicación: ng new al primer ng serve": 01-historia-y-primeros-pasos/4-tu-primera-aplicacion-ng-new-al-primer-ng-serve.md
+      - "Cap. 2 - CLI y Estructura de Proyecto":
+          - "Visión general: módulos, componentes, servicios": 02-cli-y-estructura-de-proyecto/1-vision-general-modulos-componentes-servicios.md
+          - "Angular CLI a fondo: comandos esenciales y schematics": 02-cli-y-estructura-de-proyecto/2-angular-cli-a-fondo-comandos-esenciales-y-schematics.md
+          - "Estructura de carpetas y convenciones de proyecto": 02-cli-y-estructura-de-proyecto/3-estructura-de-carpetas-y-convenciones-de-proyecto.md
+          - "El proceso de arranque: main.ts, AppModule y bootstrap": 02-cli-y-estructura-de-proyecto/4-el-proceso-de-arranque-main-ts-appmodule-y-bootstrap.md
+  - "PARTE II - Componentes: El Alma de Angular":
+      - "Cap. 3 - Fundamentos de Componentes":
+          - "Anatomía de un componente: clase, decorador y template": 03-fundamentos-de-componentes/1-anatomia-de-un-componente-clase-decorador-y-template.md
+          - "Ciclo de vida: OnInit, OnChanges, OnDestroy y los demás": 03-fundamentos-de-componentes/2-ciclo-de-vida-oninit-onchanges-ondestroy-y-los-demas.md
+          - "Comunicación con @Input y @Output": 03-fundamentos-de-componentes/3-comunicacion-con-input-y-output.md
+          - "Estilos en componentes: encapsulación y ViewEncapsulation": 03-fundamentos-de-componentes/4-estilos-en-componentes-encapsulacion-y-viewencapsulation.md
+      - "Cap. 4 - Composición y Carga de Componentes":
+          - "ViewChild, ViewChildren y ElementRef": 04-composicion-y-carga-de-componentes/1-viewchild-viewchildren-y-elementref.md
+          - "ng-content: proyección de contenido simple y múltiple": 04-composicion-y-carga-de-componentes/2-ng-content-proyeccion-de-contenido-simple-y-multiple.md
+          - "Componentes Standalone: el futuro de Angular": 04-composicion-y-carga-de-componentes/3-componentes-standalone-el-futuro-de-angular.md
+          - "Deferrable Views con @defer: carga diferida de UI": 04-composicion-y-carga-de-componentes/4-deferrable-views-con-defer-carga-diferida-de-ui.md
+  - "PARTE III - Templates y Directivas":
+      - "Cap. 5 - Data Binding y Control de Flujo":
+          - "Interpolación y Property Binding": 05-data-binding-y-control-de-flujo/1-interpolacion-y-property-binding.md
+          - "Event Binding y Two-way Binding": 05-data-binding-y-control-de-flujo/2-event-binding-y-two-way-binding.md
+          - "Template Reference Variables y @ViewChild": 05-data-binding-y-control-de-flujo/3-template-reference-variables-y-viewchild.md
+          - "Nueva sintaxis de control de flujo: @if, @for, @switch": 05-data-binding-y-control-de-flujo/4-nueva-sintaxis-de-control-de-flujo-if-for-switch.md
+      - "Cap. 6 - Directivas":
+          - "Directivas estructurales built-in: ngIf, ngFor, ngSwitch": 06-directivas/1-directivas-estructurales-built-in-ngif-ngfor-ngswitch.md
+          - "Directivas de atributo built-in: ngClass, ngStyle": 06-directivas/2-directivas-de-atributo-built-in-ngclass-ngstyle.md
+          - "Creando directivas de atributo personalizadas": 06-directivas/3-creando-directivas-de-atributo-personalizadas.md
+          - "HostListener, HostBinding y directivas estructurales propias": 06-directivas/4-hostlistener-hostbinding-y-directivas-estructurales-propias.md
+  - "PARTE IV - Pipes: Transformando Datos":
+      - "Cap. 7 - Pipes":
+          - "Pipes built-in: date, currency, number, json, async": 07-pipes/1-pipes-built-in-date-currency-number-json-async.md
+          - "Parámetros de pipes y encadenamiento": 07-pipes/2-parametros-de-pipes-y-encadenamiento.md
+          - "Creando pipes personalizados con PipeTransform": 07-pipes/3-creando-pipes-personalizados-con-pipetransform.md
+          - "Pipes puros vs impuros: impacto en rendimiento": 07-pipes/4-pipes-puros-vs-impuros-impacto-en-rendimiento.md
+  - "PARTE V - Servicios e Inyección de Dependencias":
+      - "Cap. 8 - Servicios e Inyección de Dependencias":
+          - "¿Qué es un servicio? Responsabilidad única y separación de capas": 08-servicios-e-inyeccion-de-dependencias/1-que-es-un-servicio-responsabilidad-unica-y-separacion-de-capas.md
+          - "Creando e inyectando servicios": 08-servicios-e-inyeccion-de-dependencias/2-creando-e-inyectando-servicios.md
+          - "Inyección de Dependencias: el sistema DI de Angular": 08-servicios-e-inyeccion-de-dependencias/3-inyeccion-de-dependencias-el-sistema-di-de-angular.md
+          - "Jerarquía de inyectores: root, módulo y componente": 08-servicios-e-inyeccion-de-dependencias/4-jerarquia-de-inyectores-root-modulo-y-componente.md
+      - "Cap. 9 - NgModules y Standalone":
+          - "NgModules: declarations, imports, exports, providers": 09-ngmodules-y-standalone/1-ngmodules-declarations-imports-exports-providers.md
+          - "Módulo Core, Shared y de funcionalidad": 09-ngmodules-y-standalone/2-modulo-core-shared-y-de-funcionalidad.md
+          - "El mundo Standalone: componentes, directivas y pipes sin módulo": 09-ngmodules-y-standalone/3-el-mundo-standalone-componentes-directivas-y-pipes-sin-modulo.md
+          - "Guía de migración: de NgModules a Standalone": 09-ngmodules-y-standalone/4-guia-de-migracion-de-ngmodules-a-standalone.md
+  - "PARTE VI - Navegación y Routing":
+      - "Cap. 10 - Routing: Fundamentos":
+          - "Configuración del Router: provideRouter y rutas básicas": 10-routing-fundamentos/1-configuracion-del-router-providerouter-y-rutas-basicas.md
+          - "RouterLink, RouterOutlet y navegación programática": 10-routing-fundamentos/2-routerlink-routeroutlet-y-navegacion-programatica.md
+          - "Rutas con parámetros :id y Query Params": 10-routing-fundamentos/3-rutas-con-parametros-id-y-query-params.md
+          - "Rutas hijas (Child Routes) y outlets secundarios": 10-routing-fundamentos/4-rutas-hijas-child-routes-y-outlets-secundarios.md
+      - "Cap. 11 - Routing Avanzado":
+          - "Lazy Loading: cargando módulos y componentes bajo demanda": 11-routing-avanzado/1-lazy-loading-cargando-modulos-y-componentes-bajo-demanda.md
+          - "Guards funcionales: canActivate, canDeactivate, canMatch": 11-routing-avanzado/2-guards-funcionales-canactivate-candeactivate-canmatch.md
+          - "Resolvers: precargando datos antes de navegar": 11-routing-avanzado/3-resolvers-precargando-datos-antes-de-navegar.md
+          - "Estrategias de preloading: PreloadAllModules y personalizadas": 11-routing-avanzado/4-estrategias-de-preloading-preloadallmodules-y-personalizadas.md
+  - "PARTE VII - Formularios":
+      - "Cap. 12 - Formularios Template-Driven":
+          - "Fundamentos: ngModel, ngForm y FormsModule": 12-formularios-template-driven/1-fundamentos-ngmodel-ngform-y-formsmodule.md
+          - "Validación con atributos HTML y directivas de Angular": 12-formularios-template-driven/2-validacion-con-atributos-html-y-directivas-de-angular.md
+          - "Mensajes de error y clases CSS de estado": 12-formularios-template-driven/3-mensajes-de-error-y-clases-css-de-estado.md
+          - "Formularios anidados con ngModelGroup": 12-formularios-template-driven/4-formularios-anidados-con-ngmodelgroup.md
+      - "Cap. 13 - Formularios Reactivos":
+          - "FormControl, FormGroup y FormBuilder": 13-formularios-reactivos/1-formcontrol-formgroup-y-formbuilder.md
+          - "Validators síncronos y asíncronos built-in": 13-formularios-reactivos/2-validators-sincronos-y-asincronos-built-in.md
+          - "FormArray: listas dinámicas de controles": 13-formularios-reactivos/3-formarray-listas-dinamicas-de-controles.md
+          - "Validadores personalizados y cross-field validation": 13-formularios-reactivos/4-validadores-personalizados-y-cross-field-validation.md
+  - "PARTE VIII - Comunicación HTTP":
+      - "Cap. 14 - HttpClient":
+          - "Configuración con provideHttpClient y primera petición GET": 14-httpclient/1-configuracion-con-providehttpclient-y-primera-peticion-get.md
+          - "POST, PUT, PATCH, DELETE con tipado genérico": 14-httpclient/2-post-put-patch-delete-con-tipado-generico.md
+          - "Manejo de errores con catchError y tipado de respuestas": 14-httpclient/3-manejo-de-errores-con-catcherror-y-tipado-de-respuestas.md
+          - "Headers, params, HttpContext y opciones avanzadas": 14-httpclient/4-headers-params-httpcontext-y-opciones-avanzadas.md
+      - "Cap. 15 - Interceptores HTTP":
+          - "Interceptores funcionales (Angular 15+): concepto y estructura": 15-interceptores-http/1-interceptores-funcionales-angular-15-concepto-y-estructura.md
+          - "Interceptor de autenticación: adjuntando JWT automáticamente": 15-interceptores-http/2-interceptor-de-autenticacion-adjuntando-jwt-automaticamente.md
+          - "Interceptor de loading global y manejo centralizado de errores": 15-interceptores-http/3-interceptor-de-loading-global-y-manejo-centralizado-de-errores.md
+          - "Estrategias de caché HTTP y retry con RxJS": 15-interceptores-http/4-estrategias-de-cache-http-y-retry-con-rxjs.md
+  - "PARTE IX - Programación Reactiva con RxJS":
+      - "Cap. 16 - RxJS: Fundamentos":
+          - "¿Qué es la programación reactiva? Observables vs Promesas": 16-rxjs-fundamentos/1-que-es-la-programacion-reactiva-observables-vs-promesas.md
+          - "Observable, Observer, Subscription y el contrato reactivo": 16-rxjs-fundamentos/2-observable-observer-subscription-y-el-contrato-reactivo.md
+          - "Subject, BehaviorSubject, ReplaySubject y AsyncSubject": 16-rxjs-fundamentos/3-subject-behaviorsubject-replaysubject-y-asyncsubject.md
+          - "Creadores: of, from, interval, timer, fromEvent": 16-rxjs-fundamentos/4-creadores-of-from-interval-timer-fromevent.md
+      - "Cap. 17 - RxJS: Operadores":
+          - "Transformación: map, switchMap, mergeMap, concatMap, exhaustMap": 17-rxjs-operadores/1-transformacion-map-switchmap-mergemap-concatmap-exhaustmap.md
+          - "Filtrado: filter, take, first, debounceTime, distinctUntilChanged": 17-rxjs-operadores/2-filtrado-filter-take-first-debouncetime-distinctuntilchanged.md
+          - "Combinación: combineLatest, forkJoin, zip, withLatestFrom": 17-rxjs-operadores/3-combinacion-combinelatest-forkjoin-zip-withlatestfrom.md
+          - "Manejo de errores: catchError, retry, retryWhen, throwError": 17-rxjs-operadores/4-manejo-de-errores-catcherror-retry-retrywhen-throwerror.md
+      - "Cap. 18 - RxJS: Patrones y Testing":
+          - "Patrones reactivos en servicios Angular": 18-rxjs-patrones-y-testing/1-patrones-reactivos-en-servicios-angular.md
+          - "Evitando memory leaks: takeUntilDestroyed, async pipe": 18-rxjs-patrones-y-testing/2-evitando-memory-leaks-takeuntildestroyed-async-pipe.md
+          - "Operadores de acumulación: scan, reduce, buffer, window": 18-rxjs-patrones-y-testing/3-operadores-de-acumulacion-scan-reduce-buffer-window.md
+          - "Testing de Observables con marble testing": 18-rxjs-patrones-y-testing/4-testing-de-observables-con-marble-testing.md
+  - "PARTE X - Angular Signals: Reactividad Moderna":
+      - "Cap. 19 - Signals: Fundamentos":
+          - "¿Qué son los Signals y cómo cambian Angular?": 19-signals-fundamentos/1-que-son-los-signals-y-como-cambian-angular.md
+          - "signal(), computed() y effect(): la trinidad reactiva": 19-signals-fundamentos/2-signal-computed-y-effect-la-trinidad-reactiva.md
+          - "Signal Inputs, Model Signals y output()": 19-signals-fundamentos/3-signal-inputs-model-signals-y-output.md
+          - "toSignal() y toObservable(): puente entre Signals y RxJS": 19-signals-fundamentos/4-tosignal-y-toobservable-puente-entre-signals-y-rxjs.md
+      - "Cap. 20 - Signals Avanzado":
+          - "Gestión de estado local con Signals en componentes": 20-signals-avanzado/1-gestion-de-estado-local-con-signals-en-componentes.md
+          - "Signals en formularios reactivos e HTTP": 20-signals-avanzado/2-signals-en-formularios-reactivos-e-http.md
+          - "Signals y Change Detection: el camino a Zoneless Angular": 20-signals-avanzado/3-signals-y-change-detection-el-camino-a-zoneless-angular.md
+          - "Signals vs RxJS: cuándo usar cada paradigma": 20-signals-avanzado/4-signals-vs-rxjs-cuando-usar-cada-paradigma.md
+  - "PARTE XI - Gestión de Estado con NgRx":
+      - "Cap. 21 - NgRx: Fundamentos":
+          - "El problema del estado y el patrón Redux": 21-ngrx-fundamentos/1-el-problema-del-estado-y-el-patron-redux.md
+          - "Instalación, configuración y arquitectura NgRx": 21-ngrx-fundamentos/2-instalacion-configuracion-y-arquitectura-ngrx.md
+          - "Actions: definiendo los eventos de la aplicación": 21-ngrx-fundamentos/3-actions-definiendo-los-eventos-de-la-aplicacion.md
+          - "Reducers: transformando el estado de forma pura": 21-ngrx-fundamentos/4-reducers-transformando-el-estado-de-forma-pura.md
+      - "Cap. 22 - NgRx: Selectors y Effects":
+          - "Selectors: consultando el estado de forma eficiente": 22-ngrx-selectors-y-effects/1-selectors-consultando-el-estado-de-forma-eficiente.md
+          - "Selectors compuestos, memoización y createSelector": 22-ngrx-selectors-y-effects/2-selectors-compuestos-memoizacion-y-createselector.md
+          - "Effects: manejando efectos secundarios asincrónicos": 22-ngrx-selectors-y-effects/3-effects-manejando-efectos-secundarios-asincronicos.md
+          - "Effects con operadores RxJS: switchMap, concatMap, error handling": 22-ngrx-selectors-y-effects/4-effects-con-operadores-rxjs-switchmap-concatmap-error-handling.md
+      - "Cap. 23 - NgRx: Entity y Herramientas":
+          - "NgRx Entity: colecciones normalizadas con EntityAdapter": 23-ngrx-entity-y-herramientas/1-ngrx-entity-colecciones-normalizadas-con-entityadapter.md
+          - "NgRx Router Store: sincronizando router y store": 23-ngrx-entity-y-herramientas/2-ngrx-router-store-sincronizando-router-y-store.md
+          - "NgRx DevTools: debugging con time-travel": 23-ngrx-entity-y-herramientas/3-ngrx-devtools-debugging-con-time-travel.md
+          - "Testing de NgRx: Actions, Reducers, Effects y Selectors": 23-ngrx-entity-y-herramientas/4-testing-de-ngrx-actions-reducers-effects-y-selectors.md
+      - "Cap. 24 - NgRx: Signal Store":
+          - "Introducción al Signal Store: el nuevo paradigma NgRx": 24-ngrx-signal-store/1-introduccion-al-signal-store-el-nuevo-paradigma-ngrx.md
+          - "withState, withComputed y withMethods": 24-ngrx-signal-store/2-withstate-withcomputed-y-withmethods.md
+          - "withHooks y store features personalizadas reutilizables": 24-ngrx-signal-store/3-withhooks-y-store-features-personalizadas-reutilizables.md
+          - "Migrando del NgRx Store clásico al Signal Store": 24-ngrx-signal-store/4-migrando-del-ngrx-store-clasico-al-signal-store.md
+  - "PARTE XII - Optimización y Rendimiento":
+      - "Cap. 25 - Change Detection":
+          - "Cómo funciona Zone.js y el ciclo de Change Detection": 25-change-detection/1-como-funciona-zone-js-y-el-ciclo-de-change-detection.md
+          - "Estrategia OnPush: cuándo y cómo usarla": 25-change-detection/2-estrategia-onpush-cuando-y-como-usarla.md
+          - "ChangeDetectorRef: markForCheck, detach y control manual": 25-change-detection/3-changedetectorref-markforcheck-detach-y-control-manual.md
+          - "Zoneless Angular con provideExperimentalZonelessChangeDetection": 25-change-detection/4-zoneless-angular-con-provideexperimentalzonelesschangedetection.md
+      - "Cap. 26 - Rendimiento y Optimización":
+          - "Virtual Scrolling con CDK: listas de miles de elementos": 26-rendimiento-y-optimizacion/1-virtual-scrolling-con-cdk-listas-de-miles-de-elementos.md
+          - "NgOptimizedImage: imágenes optimizadas out-of-the-box": 26-rendimiento-y-optimizacion/2-ngoptimizedimage-imagenes-optimizadas-out-of-the-box.md
+          - "Bundle analysis con webpack-bundle-analyzer y esbuild": 26-rendimiento-y-optimizacion/3-bundle-analysis-con-webpack-bundle-analyzer-y-esbuild.md
+          - "Core Web Vitals en apps Angular: LCP, CLS y INP": 26-rendimiento-y-optimizacion/4-core-web-vitals-en-apps-angular-lcp-cls-y-inp.md
+      - "Cap. 27 - Server-Side Rendering":
+          - "SSR con @angular/ssr: introducción e instalación": 27-server-side-rendering/1-ssr-con-angular-ssr-introduccion-e-instalacion.md
+          - "Hydration e TransferState: del servidor al cliente": 27-server-side-rendering/2-hydration-e-transferstate-del-servidor-al-cliente.md
+          - "Static Site Generation (SSG) con prerender": 27-server-side-rendering/3-static-site-generation-ssg-con-prerender.md
+          - "SSR con autenticación, cookies y APIs privadas": 27-server-side-rendering/4-ssr-con-autenticacion-cookies-y-apis-privadas.md
+  - "PARTE XIII - Librerías Esenciales del Ecosistema":
+      - "Cap. 28 - Angular Material":
+          - "Instalación y theming con Design Tokens (Material 3)": 28-angular-material/1-instalacion-y-theming-con-design-tokens-material-3.md
+          - "Componentes de navegación: toolbar, sidenav, tabs, menu": 28-angular-material/2-componentes-de-navegacion-toolbar-sidenav-tabs-menu.md
+          - "Formularios y tablas: MatInput, MatSelect, MatTable, MatPaginator": 28-angular-material/3-formularios-y-tablas-matinput-matselect-mattable-matpaginator.md
+          - "Overlays: MatDialog, MatSnackBar, MatBottomSheet": 28-angular-material/4-overlays-matdialog-matsnackbar-matbottomsheet.md
+      - "Cap. 29 - Angular CDK":
+          - "Overlay y Portal: capas dinámicas de UI": 29-angular-cdk/1-overlay-y-portal-capas-dinamicas-de-ui.md
+          - "Drag and Drop con DragDropModule": 29-angular-cdk/2-drag-and-drop-con-dragdropmodule.md
+          - "Accesibilidad con el paquete a11y del CDK": 29-angular-cdk/3-accesibilidad-con-el-paquete-a11y-del-cdk.md
+          - "Stepper, Table y Virtual Scroll del CDK": 29-angular-cdk/4-stepper-table-y-virtual-scroll-del-cdk.md
+      - "Cap. 30 - Tailwind CSS":
+          - "Instalación y configuración de Tailwind en Angular": 30-tailwind-css/1-instalacion-y-configuracion-de-tailwind-en-angular.md
+          - "Construyendo componentes UI con clases utilitarias": 30-tailwind-css/2-construyendo-componentes-ui-con-clases-utilitarias.md
+          - "Responsive design y Dark Mode con Tailwind": 30-tailwind-css/3-responsive-design-y-dark-mode-con-tailwind.md
+          - "Tailwind + Angular Material: convivencia armoniosa": 30-tailwind-css/4-tailwind-angular-material-convivencia-armoniosa.md
+      - "Cap. 31 - Testing":
+          - "Testing unitario con Jest: setup y primeras pruebas": 31-testing/1-testing-unitario-con-jest-setup-y-primeras-pruebas.md
+          - "Testing de componentes con Angular Testing Library": 31-testing/2-testing-de-componentes-con-angular-testing-library.md
+          - "Testing de servicios, HTTP y NgRx": 31-testing/3-testing-de-servicios-http-y-ngrx.md
+          - "E2E Testing con Playwright en proyectos Angular": 31-testing/4-e2e-testing-con-playwright-en-proyectos-angular.md
+  - "PARTE XIV - Arquitectura y Patrones Avanzados":
+      - "Cap. 32 - Arquitectura y Patrones":
+          - "Arquitectura por features y dominios escalables": 32-arquitectura-y-patrones/1-arquitectura-por-features-y-dominios-escalables.md
+          - "Smart Components y Dumb Components": 32-arquitectura-y-patrones/2-smart-components-y-dumb-components.md
+          - "Facade Pattern con servicios y NgRx": 32-arquitectura-y-patrones/3-facade-pattern-con-servicios-y-ngrx.md
+          - "Nx Workspace: monorepos y arquitectura de librerías": 32-arquitectura-y-patrones/4-nx-workspace-monorepos-y-arquitectura-de-librerias.md
+      - "Cap. 33 - Micro-Frontends":
+          - "¿Qué son los micro-frontends y cuándo usarlos?": 33-micro-frontends/1-que-son-los-micro-frontends-y-cuando-usarlos.md
+          - "Webpack Module Federation con Angular": 33-micro-frontends/2-webpack-module-federation-con-angular.md
+          - "Native Federation: Module Federation sin Webpack": 33-micro-frontends/3-native-federation-module-federation-sin-webpack.md
+          - "Comunicación entre micro-frontends: eventos y estado compartido": 33-micro-frontends/4-comunicacion-entre-micro-frontends-eventos-y-estado-compartido.md
+      - "Cap. 34 - i18n y Accesibilidad":
+          - "i18n nativo con @angular/localize": 34-i18n-y-accesibilidad/1-i18n-nativo-con-angular-localize.md
+          - "Transloco: la alternativa moderna para i18n en runtime": 34-i18n-y-accesibilidad/2-transloco-la-alternativa-moderna-para-i18n-en-runtime.md
+          - "Accesibilidad (a11y): semántica, roles ARIA y Angular": 34-i18n-y-accesibilidad/3-accesibilidad-a11y-semantica-roles-aria-y-angular.md
+          - "Patrones ARIA avanzados y auditoría de accesibilidad": 34-i18n-y-accesibilidad/4-patrones-aria-avanzados-y-auditoria-de-accesibilidad.md
+      - "Cap. 35 - Despliegue y Producción":
+          - "Configuración de entornos: environment.ts y variables de entorno": 35-despliegue-y-produccion/1-configuracion-de-entornos-environment-ts-y-variables-de-entorno.md
+          - "CI/CD con GitHub Actions: build, test y deploy automático": 35-despliegue-y-produccion/2-ci-cd-con-github-actions-build-test-y-deploy-automatico.md
+          - "Dockerización de apps Angular y deploy en cloud": 35-despliegue-y-produccion/3-dockerizacion-de-apps-angular-y-deploy-en-cloud.md
+          - "Monitoreo, error tracking con Sentry y analytics": 35-despliegue-y-produccion/4-monitoreo-error-tracking-con-sentry-y-analytics.md
+  - "PARTE XV - Angular 20 y el Futuro del Framework":
+      - "Cap. 36 - Zoneless y el Futuro":
+          - "`@let` en templates y signal-based queries": 36-zoneless-y-el-futuro/1-let-en-templates-y-signal-based-queries.md
+          - "linkedSignal(), resource() y httpResource() en Angular 20": 36-zoneless-y-el-futuro/2-linkedsignal-resource-y-httpresource-en-angular-20.md
+          - "Hydratación incremental y modos de renderizado por ruta": 36-zoneless-y-el-futuro/3-hydratacion-incremental-y-modos-de-renderizado-por-ruta.md
+          - "Zoneless, Angular 21 y el roadmap del framework": 36-zoneless-y-el-futuro/4-zoneless-angular-21-y-el-roadmap-del-framework.md
+  - "PARTE XVI - Angular 22":
+      - "Cap. 37 - Angular 22":
+          - "Angular 22: OnPush por defecto y la nueva base del framework": 37-angular-22/1-angular-22-onpush-por-defecto-y-la-nueva-base-del-framework.md
+          - "Signal Forms estables: form(), field() y FieldTree": 37-angular-22/2-signal-forms-estables-form-field-y-fieldtree.md
+          - "@Service(), injectAsync() y la evolución de la inyección de dependencias": 37-angular-22/3-service-injectasync-y-la-evolucion-de-la-inyeccion-de-dependencias.md
+          - "Angular Aria estable, templates y el ecosistema de Angular 22": 37-angular-22/4-angular-aria-estable-templates-y-el-ecosistema-de-angular-22.md
