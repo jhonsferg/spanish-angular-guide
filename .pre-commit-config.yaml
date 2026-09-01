@@ -1,0 +1,29 @@
+repos:
+  # markdownlint — lint de archivos Markdown
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.45.0
+    hooks:
+      - id: markdownlint-fix
+        args: ["--config", ".markdownlint.yaml"]
+        name: markdownlint (auto-fix)
+
+  # Hooks generales de calidad
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+        name: Validar archivos YAML
+        exclude: mkdocs\.yml  # usa tags Python (!!python/name:) que PyYAML puro no soporta
+      - id: check-toml
+        name: Validar archivos TOML
+      - id: end-of-file-fixer
+        name: Asegurar newline al final de archivo
+        exclude: \.md$
+      - id: trailing-whitespace
+        name: Eliminar espacios al final de línea
+        args: [--markdown-linebreak-ext=md]
+      - id: mixed-line-ending
+        name: Normalizar saltos de línea a LF
+        args: [--fix=lf]
+      - id: check-merge-conflict
+        name: Detectar marcadores de merge sin resolver
