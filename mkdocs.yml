@@ -25,10 +25,10 @@ theme:
         icon: material/brightness-4
         name: Cambiar a modo claro
   features:
-    - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.indexes
+    - navigation.path
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
