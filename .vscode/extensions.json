@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    // Markdown
+    "DavidAnson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    // YAML
+    "redhat.vscode-yaml",
+    // Python / uv
+    "ms-python.python",
+    // Git
+    "eamodio.gitlens",
+    // EditorConfig
+    "EditorConfig.EditorConfig",
+    // Docker
+    "ms-azuretools.vscode-docker"
+  ]
+}
