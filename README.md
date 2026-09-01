@@ -414,6 +414,4 @@ _Esta guía es un documento vivo. Las secciones de Angular 20, 21 y 22 reflejan 
 
 ## Contribuidores
 
-Esta guía fue redactada en colaboración con [Claude Code](https://claude.ai/code) (Anthropic), que participó activamente en la escritura de capítulos, la revisión de ejemplos de código, la coherencia terminológica y la estructuración del contenido a lo largo de los 37 capítulos.
-
 Gracias a todas las personas que contribuyan con correcciones, sugerencias y mejoras a través de issues y pull requests.
